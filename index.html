@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Libros</title>
+  </head>
+
+  <body class="bg-dark text-white">
+    <div class="container-fluid">
+      <div class="pt-2">
+        <h1>Estos son los libros disponibles en la biblioteca:</h1>
+        <hr />
+      </div>
+
+      <div class="row p-1">
+        <div
+          id="filtro-rango-pag"
+          class="rounded-end py-4 mt-4 col-lg-2 border"
+        >
+          <p>Ordenar por:</p>
+
+          <button class="btn btn-light fw-semibold" id="sortPagDesc">
+            Pags Desc
+          </button>
+
+          <hr />
+
+          <p>Filtrar por Paginas:</p>
+
+          <input
+            class="form-control my-2 bg-dark border-secondary"
+            type="number"
+            placeholder="min."
+            id="rango-min"
+          />
+
+          <input
+            class="form-control my-2 bg-dark border-secondary"
+            type="number"
+            placeholder="máx."
+            id="rango-max"
+          />
+
+          <button class="btn btn-outline-light fw-semibold" id="filtrar">
+            Filtrar
+          </button>
+          <button class="btn btn-outline-light fw-semibold" id="limpiar">
+            Limpiar
+          </button>
+
+          <hr />
+
+          <p>O busca el libro que quieres:</p>
+
+          <input
+            class="form-control my-2 bg-dark border-secondary"
+            type="search"
+            id="buscador"
+          />
+        </div>
+
+        <div class="col-lg-2"></div>
+        <ul id="listado" class="list-group col-lg-4 mt-4 px-0"></ul>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/bootstrap.bundle.min.js"></script>
+    <script src="scripts/init.js"></script>
+    <script src="scripts/libros.js"></script>
+  </body>
+</html>
